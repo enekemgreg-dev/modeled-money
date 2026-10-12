@@ -16,10 +16,12 @@ Work top to bottom. Mark each task done with the date, and update the relevant `
 2. **Model check.**
    Run `python models/fee_model.py` and confirm it passes. Confirm that the CSVs it writes to `models/out/` import cleanly into a spreadsheet.
    Done when: assertions pass and you have noted any change needed.
+   **Done 2026-10-12.** Assertions pass. Both CSVs imported into LibreOffice Calc with no errors: every header matches, every cell imported as a number, and all values match the CSVs. Google Sheets itself was not tested (no account access). No change needed.
 
 3. **Video 1 fact-check.**
    Compare `videos/01-fee-drag/script.md` with `numbers.md` and the model output. List every sentence containing a number that is not in `numbers.md`, and every claim about fees or funds that has no source.
    Done when: `status.md` lists each problem, with nothing rewritten silently.
+   **Done 2026-10-12.** Problems are listed in `videos/01-fee-drag/status.md`. U1-U3 are still UNVERIFIED because the SEC and FINRA pages are blocked by this environment's network policy.
 
 4. **Rent vs buy model (Video 2 candidate, only if validation supports it).**
    Build `models/rent_vs_buy.py` with explicit inputs: home price, down payment, mortgage rate, property tax, insurance, maintenance, rent, rent growth, home price growth, and investment return on the down payment. Add assertions for a worked example, write CSV output, and document every assumption in the docstring.
